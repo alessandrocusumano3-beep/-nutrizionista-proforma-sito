@@ -262,17 +262,26 @@ main.page-surface > .cursor-follow-glow {
 }
 
 .scroll-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  bottom: 24px;
   z-index: 20;
   color: #fff;
   opacity: 0.8;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   animation: scroll-bounce 1.8s infinite;
   transition:
     color 0.25s ease,
     opacity 0.3s ease;
+}
+
+@media (max-width: 1023px), (hover: none), (pointer: coarse) {
+  .scroll-indicator {
+    display: none;
+  }
 }
 
 .scroll-indicator.is-hidden {
@@ -298,7 +307,7 @@ main.page-surface > .cursor-follow-glow {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 16px 20px;
+  padding: 14px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,6 +330,10 @@ main.page-surface > .cursor-follow-glow {
   transition: all 0.3s ease;
 }
 
+.navbar-links {
+  margin-right: -8px;
+}
+
 .navbar a:hover {
   opacity: 1;
 }
@@ -329,7 +342,7 @@ main.page-surface > .cursor-follow-glow {
   display: flex;
   flex-direction: column;
   line-height: 1;
-  margin-left: 2px;
+  margin-left: -8px;
 }
 
 .brand {
@@ -345,7 +358,15 @@ main.page-surface > .cursor-follow-glow {
 
 @media (min-width: 768px) {
   .navbar {
-    padding: 20px 40px;
+    padding: 18px 32px;
+  }
+
+  .logo {
+    margin-left: -12px;
+  }
+
+  .navbar-links {
+    margin-right: -14px;
   }
 }
 

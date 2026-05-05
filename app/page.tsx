@@ -394,7 +394,8 @@ export default function Home() {
 
   useEffect(() => {
     const onScroll = () => {
-      setShowScrollIndicator(window.scrollY <= 50);
+      const nearPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 24;
+      setShowScrollIndicator(!nearPageEnd);
     };
 
     onScroll();
@@ -412,7 +413,7 @@ export default function Home() {
             <span className="brand block text-sm font-semibold tracking-[0.12em] text-white">PROFORMA</span>
             <span className="sub block text-xs font-medium tracking-[0.08em] text-white/80">Nutrizione</span>
           </div>
-          <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.1em] text-white/90 md:gap-7">
+          <div className="navbar-links flex items-center gap-5 text-xs font-medium uppercase tracking-[0.1em] text-white/90 md:gap-7">
             <a href="#services" className="transition hover:text-white">
               Servizi
             </a>
@@ -425,7 +426,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <section data-reveal className="hero relative min-h-screen overflow-hidden px-5 pb-20 pt-[80px] md:px-12 md:pb-24 md:pt-[80px] lg:px-16 lg:pb-28 lg:pt-[80px]">
+      <section data-reveal className="hero relative min-h-screen overflow-hidden px-5 pb-20 pt-[52px] md:px-12 md:pb-24 md:pt-[52px] lg:px-16 lg:pb-28 lg:pt-[52px]">
         <div className="hero-glow" aria-hidden />
         <div
           data-parallax="-10"
@@ -446,7 +447,7 @@ export default function Home() {
         <div className="pointer-events-none absolute right-6 top-24 h-40 w-40 animate-[float_6s_ease-in-out_infinite] rounded-full bg-white/10 blur-3xl md:right-12 md:top-20" />
 
         <div className="relative z-10 mx-auto min-h-screen max-w-5xl text-center">
-          <div className="flex min-h-screen -translate-y-10 flex-col items-center justify-center py-3 text-center md:-translate-y-12 md:items-start md:text-left">
+          <div className="flex min-h-[calc(100vh-52px)] flex-col items-center justify-start pt-4 text-center md:items-start md:pt-6 md:text-left">
           <motion.p
             className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-white md:mb-6 md:text-[11px] md:tracking-[0.38em]"
             initial={{ opacity: 0, y: 12 }}
