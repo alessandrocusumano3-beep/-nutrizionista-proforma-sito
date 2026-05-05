@@ -407,20 +407,22 @@ export default function Home() {
       <CustomCursor />
       <CursorFollowGlow />
       <nav className="navbar z-[70]">
-        <div className="logo leading-tight">
-          <span className="brand block text-sm font-semibold tracking-[0.12em] text-white">PROFORMA</span>
-          <span className="sub block text-xs font-medium tracking-[0.08em] text-white/80">Nutrizione</span>
-        </div>
-        <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.1em] text-white/90 md:gap-7">
-          <a href="#services" className="transition hover:text-white">
-            Servizi
-          </a>
-          <a href="#risultati" className="transition hover:text-white">
-            Risultati
-          </a>
-          <a href="#contact" className="transition hover:text-white">
-            Contatti
-          </a>
+        <div className="navbar-inner">
+          <div className="logo">
+            <span className="brand block text-sm font-semibold tracking-[0.12em] text-white">PROFORMA</span>
+            <span className="sub block text-xs font-medium tracking-[0.08em] text-white/80">Nutrizione</span>
+          </div>
+          <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.1em] text-white/90 md:gap-7">
+            <a href="#services" className="transition hover:text-white">
+              Servizi
+            </a>
+            <a href="#risultati" className="transition hover:text-white">
+              Risultati
+            </a>
+            <a href="#contact" className="transition hover:text-white">
+              Contatti
+            </a>
+          </div>
         </div>
       </nav>
       <section data-reveal className="hero relative min-h-screen overflow-hidden px-5 pb-20 pt-[80px] md:px-12 md:pb-24 md:pt-[80px] lg:px-16 lg:pb-28 lg:pt-[80px]">
@@ -444,9 +446,9 @@ export default function Home() {
         <div className="pointer-events-none absolute right-6 top-24 h-40 w-40 animate-[float_6s_ease-in-out_infinite] rounded-full bg-white/10 blur-3xl md:right-12 md:top-20" />
 
         <div className="relative z-10 mx-auto min-h-screen max-w-5xl text-center">
-          <div className="flex min-h-screen -translate-y-8 flex-col items-center justify-center py-4 text-center md:-translate-y-10 md:items-start md:text-left">
+          <div className="flex min-h-screen -translate-y-10 flex-col items-center justify-center py-3 text-center md:-translate-y-12 md:items-start md:text-left">
           <motion.p
-            className="mb-8 text-[10px] font-semibold uppercase tracking-[0.3em] text-white md:mb-10 md:text-[11px] md:tracking-[0.38em]"
+            className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-white md:mb-6 md:text-[11px] md:tracking-[0.38em]"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.05, ease: heroEase }}
@@ -454,7 +456,7 @@ export default function Home() {
             Nutrizione
           </motion.p>
 
-          <div className="mb-8 h-px w-16 bg-white/60 md:mb-12 md:w-full md:max-w-[4.5rem]" />
+          <div className="mb-5 h-px w-16 bg-white/60 md:mb-6 md:w-full md:max-w-[4.5rem]" />
 
           <motion.h1
             className="hero-title mb-3 max-w-[18ch] break-words text-4xl font-semibold leading-tight text-white md:text-6xl"
