@@ -447,7 +447,7 @@ export default function Home() {
         <div className="pointer-events-none absolute right-6 top-24 h-40 w-40 animate-[float_6s_ease-in-out_infinite] rounded-full bg-white/10 blur-3xl md:right-12 md:top-20" />
 
         <div className="relative z-10 mx-auto min-h-screen max-w-5xl text-center">
-          <div className="flex min-h-[calc(100vh-52px)] flex-col items-center justify-start pt-4 text-center md:items-start md:pt-6 md:text-left">
+          <div className="flex min-h-[calc(100vh-52px)] flex-col items-center justify-start pt-4 text-center md:items-start md:pt-6 md:text-left lg:min-h-screen lg:justify-start lg:pt-16 lg:translate-y-0">
           <motion.p
             className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-white md:mb-6 md:text-[11px] md:tracking-[0.38em]"
             initial={{ opacity: 0, y: 12 }}
@@ -460,10 +460,17 @@ export default function Home() {
           <div className="mb-5 h-px w-16 bg-white/60 md:mb-6 md:w-full md:max-w-[4.5rem]" />
 
           <motion.h1
-            className="hero-title mb-3 max-w-[18ch] break-words text-4xl font-semibold leading-tight text-white md:text-6xl"
+            className="hero-title mb-3 max-w-[18ch] cursor-pointer break-words text-4xl font-semibold leading-tight text-white md:text-6xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.05, ease: heroEase }}
+            whileHover={{
+              scale: 1.06,
+              y: -4,
+              textShadow: "0 16px 34px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.14)"
+            }}
+            whileTap={{ scale: 1.03 }}
+            data-cursor="interactive"
           >
             Dott.ssa Valentina Trunfio
           </motion.h1>
@@ -756,7 +763,7 @@ export default function Home() {
                 Instagram
               </p>
               <a
-                href="https://www.instagram.com/valentinatrunfio.nutrizione/"
+                href="https://www.instagram.com/dott.ssa_valentina_trunfio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-block cursor-pointer break-all text-base font-semibold text-white underline decoration-transparent underline-offset-4 transition hover:text-brand-accent hover:decoration-brand-accent md:text-lg"
