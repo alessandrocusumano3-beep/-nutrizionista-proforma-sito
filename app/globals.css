@@ -265,23 +265,17 @@ main.page-surface > .cursor-follow-glow {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   left: 50%;
-  bottom: 24px;
-  z-index: 20;
+  bottom: 28px;
+  z-index: 80;
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.92;
   transform: translate(-50%, 0);
   animation: scroll-bounce 1.8s infinite;
   transition:
     color 0.25s ease,
     opacity 0.3s ease;
-}
-
-@media (max-width: 1023px), (hover: none), (pointer: coarse) {
-  .scroll-indicator {
-    display: none;
-  }
 }
 
 .scroll-indicator.is-hidden {
