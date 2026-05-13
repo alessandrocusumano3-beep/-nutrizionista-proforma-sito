@@ -5,6 +5,7 @@
   "description": "Modern professional nutrition website",
   "scripts": {
     "dev": "next dev",
+    "dev:local": "next dev -H 127.0.0.1",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,12 +20,14 @@
     "gsap": "^3.15.0",
     "lucide-react": "^1.14.0",
     "next": "^16.0.0",
+    "nodemailer": "^8.0.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "three": "^0.184.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@types/nodemailer": "^8.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",

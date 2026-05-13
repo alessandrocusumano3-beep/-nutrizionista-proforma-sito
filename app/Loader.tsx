@@ -11,9 +11,6 @@ export default function Loader() {
       setProgress((p) => {
         if (p >= 100) {
           window.clearInterval(t);
-          setPhase("zoom");
-          window.setTimeout(() => setPhase("flash"), 1000);
-          window.setTimeout(() => setPhase("done"), 1700);
           return 100;
         }
         return p + 0.75;
@@ -22,6 +19,17 @@ export default function Loader() {
 
     return () => window.clearInterval(t);
   }, []);
+
+  useEffect(() => {
+    if (progress < 100) return;
+    const flashId = window.setTimeout(() => setPhase("flash"), 1000);
+    const doneId = window.setTimeout(() => setPhase("done"), 1700);
+    setPhase("zoom");
+    return () => {
+      window.clearTimeout(flashId);
+      window.clearTimeout(doneId);
+    };
+  }, [progress]);
 
   if (phase === "done") return null;
 
